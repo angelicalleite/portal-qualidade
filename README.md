@@ -14,3 +14,9 @@ Serviços de verificação da qualidade dos dados de ocorrências de espécies, 
 * [PostgreSQL] (http://www.postgresql.org)
 * [tomcat servlet container] (http://tomcat.apache.org)
 * [Maven build tool] (https://maven.apache.org)
+
+### Como consumir os serviço de verificação de nomes
+
+http://<host[:porta]>/dataquality-services/api/ocorrencia/busca/dwca_id
+
+Este serviço retornará um objeto json contendo o resultado do serviço de vericação de nomes.
