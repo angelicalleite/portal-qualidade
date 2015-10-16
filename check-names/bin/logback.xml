@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- encoders are assigned by default the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+		<encoder>
+			<pattern>
+				%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>${user.home}/validacao.log</file>
+		<append>false</append>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="br.gov.sibbr" level="DEBUG" />
+	<!-- 
+	<logger name="br.gov.sibbr.BD" level="INFO" additivity="false">
+		<appender-ref ref="FILE" />
+	</logger>	
+ 	-->
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<!-- appender-ref ref="FILE" /-->
+	</root>
+
+</configuration>
